@@ -11,7 +11,7 @@
 // A blocked request (403 etc.) is NOT evidence a job is closed — see the script.
 // closedAt on a job is the removal timer: it is retired on the next run 7+ days later.
 const JOBS_META = {
-  checkedAt: "2026-08-24",
+  checkedAt: "2026-08-31",
   checkMethod: "HEAD 每個職缺頁，依 HTTP 狀態碼判定",
   trackingSince: "2026-06-30",  // 統計窗口起點：職缺清單建立日
   retiredTotal: 11                // 累計因下架而從清單移除的筆數
@@ -59,7 +59,7 @@ const JOBS_DATA = [
     url: "https://www.cake.me/companies/addcn/jobs/tasker-outsourcing-network-product-manager-pm"
   },
   {
-    rank: 4, tier: "top", health: "open",
+    rank: 4, tier: "top", health: "closed", closedAt: "2026-08-31",
     title: "Junior Project Manager（RPA 產品）",
     company: "IsCoolLab",
     pdmExposure: "low",
